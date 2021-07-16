@@ -1,8 +1,5 @@
 package com.udara.zoo.model;
 
-public abstract class WalkingAnimal extends Animal implements Speakable {
+public abstract class WalkingAnimal extends Animal implements Speakable, Walkable {
 
-    void walk(){
-        System.out.println("I am walking");
-    }
 }
