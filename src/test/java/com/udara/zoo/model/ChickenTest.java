@@ -19,14 +19,20 @@ public class ChickenTest {
 
     @Test
     public void chickenShouldBeAbleToWalk() {
-        new Chicken().walk();
+        new Chicken(null).walk();
         assertThat(outContent.toString(), containsString("I am walking"));
     }
 
     @Test
-    public void chickenShouldBeAbleToSpeak() {
-        new Chicken().shout();
+    public void chickenShouldBeAbleToSpeakAsHen() {
+        new Chicken(new HenSpeakingBehavior()).shout();
         assertThat(outContent.toString(), containsString("Cluck, cluck"));
+    }
+
+    @Test
+    public void chickenShouldBeAbleToSpeakAsRooster() {
+        new Chicken(new RoosterSpeakingBehavior()).shout();
+        assertThat(outContent.toString(), containsString("Cock-a-doodle-doo"));
     }
 
 }

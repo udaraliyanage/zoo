@@ -1,9 +1,8 @@
 package com.udara.zoo.model;
 
-public class Rooster extends Chicken {
-
+public class RoosterSpeakingBehavior extends ChikenSpeakingBehavior {
     @Override
-    public void shout() {
+    public void speak() {
         System.out.println("Cock-a-doodle-doo");
     }
 }
