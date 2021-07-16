@@ -1,6 +1,6 @@
 package com.udara.zoo.model;
 
-public class Duck extends Bird implements Swimmable{
+public class Duck extends Bird implements Swimable{
 
     @Override
     public void swim() {
