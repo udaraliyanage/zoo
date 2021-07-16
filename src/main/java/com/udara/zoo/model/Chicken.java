@@ -1,6 +1,6 @@
 package com.udara.zoo.model;
 
-public class Chicken extends Animal implements Speakable{
+public class Chicken extends WalkingAnimal{
 
     private final ChikenSpeakingBehavior speakingBehavior;
 
