@@ -8,7 +8,7 @@ public class Duck extends Bird implements Swimmable{
     }
 
     @Override
-    void shout() {
+    public void shout() {
         System.out.println("Quack , quack");
     }
 }
