@@ -6,7 +6,7 @@ public class Bird extends Animal {
         System.out.println("I am flying");
     }
 
-    void sing(){
+    void shout(){
         System.out.println("I am singing");
     }
 }

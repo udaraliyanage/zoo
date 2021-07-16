@@ -32,7 +32,7 @@ public class BirdTest {
 
     @Test
     public void birdShouldBeAbleToSing() {
-        new Bird().sing();
+        new Bird().shout();
         assertThat(outContent.toString(), containsString("I am singing"));
     }
 }
