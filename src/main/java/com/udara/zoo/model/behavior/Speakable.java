@@ -1,5 +1,5 @@
 package com.udara.zoo.model.behavior;
 
 public interface Speakable {
-    void shout();
+    void speak();
 }

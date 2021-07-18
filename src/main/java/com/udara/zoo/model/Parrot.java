@@ -8,7 +8,7 @@ public class Parrot extends Bird{
         this.behavior = behavior;
     }
 
-    public void shout() {
+    public void speak() {
         System.out.println(behavior.getSpeech());
     }
 }

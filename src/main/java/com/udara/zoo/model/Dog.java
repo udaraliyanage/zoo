@@ -13,7 +13,7 @@ public class Dog extends Animal implements Speakable, Walkable, Swimable {
     }
 
     @Override
-    public void shout() {
+    public void speak() {
         System.out.println("Bab Baw");
     }
 

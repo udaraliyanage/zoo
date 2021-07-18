@@ -27,37 +27,37 @@ public class ChickenTest {
 
     @Test
     public void chickenShouldBeAbleToSpeakAsHen() {
-        new Chicken(new HenSpeakingBehavior()).shout();
+        new Chicken(new HenSpeakingBehavior()).speak();
         assertThat(outContent.toString(), containsString("Cluck, cluck"));
     }
 
     @Test
     public void chickenShouldBeAbleToSpeakAsRooster() {
-        new Chicken(new RoosterSpeakingBehavior()).shout();
+        new Chicken(new RoosterSpeakingBehavior()).speak();
         assertThat(outContent.toString(), containsString("Cock-a-doodle-doo"));
     }
 
     @Test
     public void frenchRoosterShouldSpeakInFrenchLanguage() {
-        new Chicken(new RoosterSpeakingBehavior(), FRENCH).shout();
+        new Chicken(new RoosterSpeakingBehavior(), FRENCH).speak();
         assertThat(outContent.toString(), containsString("cocorico"));
     }
 
     @Test
     public void frenchHenShouldSpeakInFrenchLanguage() {
-        new Chicken(new HenSpeakingBehavior(), FRENCH).shout();
+        new Chicken(new HenSpeakingBehavior(), FRENCH).speak();
         assertThat(outContent.toString(), containsString("cicirico"));
     }
 
     @Test
     public void sinhaleseRoosterShouldSpeakInSinhalaLanguage() {
-        new Chicken(new RoosterSpeakingBehavior(), new Locale("si", "LK")).shout();
+        new Chicken(new RoosterSpeakingBehavior(), new Locale("si", "LK")).speak();
         assertThat(outContent.toString(), containsString("kokkukuuu"));
     }
 
     @Test
     public void ifLocaleIsNotMentionedRoosterShouldSpeckInDefaultWay() {
-        new Chicken(new RoosterSpeakingBehavior(), null).shout();
+        new Chicken(new RoosterSpeakingBehavior(), null).speak();
         assertThat(outContent.toString(), containsString("Cock-a-doodle-do"));
     }
 }

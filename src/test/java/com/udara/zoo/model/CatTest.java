@@ -8,7 +8,6 @@ import java.io.PrintStream;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.StringContains.containsString;
-import static org.junit.Assert.*;
 
 public class CatTest {
 
@@ -27,7 +26,7 @@ public class CatTest {
 
     @Test
     public void catShouldBeAbleToShout() {
-        new Cat().shout();
+        new Cat().speak();
         assertThat(outContent.toString(), containsString("Me ow"));
     }
 

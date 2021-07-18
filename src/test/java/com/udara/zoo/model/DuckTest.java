@@ -32,7 +32,7 @@ public class DuckTest {
 
     @Test
     public void duckShouldSingInADifferentWay() {
-        new Duck().shout();
+        new Duck().speak();
         assertThat(outContent.toString(), containsString("Quack , quack"));
     }
 

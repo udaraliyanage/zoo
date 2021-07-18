@@ -19,7 +19,7 @@ public class Frog extends Animal implements Walkable, Speakable, Swimable, Jumpa
     }
 
     @Override
-    public void shout() {
+    public void speak() {
         System.out.println("Baka Baka");
     }
 

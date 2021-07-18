@@ -32,19 +32,19 @@ public class ParrotTest {
 
     @Test
     public void parrotLivingWithDogShouldSpeackAsWoofwoof() {
-        new Parrot(new ParrotLivingWithDogSpeakingBehavior()).shout();
+        new Parrot(new ParrotLivingWithDogSpeakingBehavior()).speak();
         assertThat(outContent.toString(), containsString("Woof, woof"));
     }
 
     @Test
     public void parrotLivingWithCatShouldSpeackAsMeow() {
-        new Parrot(new ParrotLivingWithCatSpeakingBehavior()).shout();
+        new Parrot(new ParrotLivingWithCatSpeakingBehavior()).speak();
         assertThat(outContent.toString(), containsString("Me ow"));
     }
 
     @Test
     public void parrotLivingWithRoosterShouldSpeackAsCockADoo() {
-        new Parrot(new ParrotLivingWithRoosterSpeakingBehavior()).shout();
+        new Parrot(new ParrotLivingWithRoosterSpeakingBehavior()).speak();
         assertThat(outContent.toString(), containsString("Cock-a-doodle-doo"));
     }
 }

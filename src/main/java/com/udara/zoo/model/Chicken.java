@@ -18,7 +18,7 @@ public class Chicken extends WalkingAnimal{
     }
 
     @Override
-    public void shout() {
+    public void speak() {
         speakingBehavior.speak(locale);
     }
 }
