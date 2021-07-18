@@ -11,6 +11,11 @@ public class CaterpillarState implements Insect, Walkable {
 
     @Override
     public void walk() {
-        System.out.println("Caterpillar crawling");;
+        System.out.println("Caterpillar crawling");
+    }
+
+    @Override
+    public boolean canFly() {
+        return false;
     }
 }

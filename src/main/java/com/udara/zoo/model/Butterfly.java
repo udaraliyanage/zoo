@@ -34,4 +34,9 @@ public class Butterfly extends Animal implements Insect {
         this.metamorphosisStatus = new ButterflyState();
         alreadyTransformed = true;
     }
+
+    @Override
+    public boolean canFly() {
+        return metamorphosisStatus.canFly();
+    }
 }

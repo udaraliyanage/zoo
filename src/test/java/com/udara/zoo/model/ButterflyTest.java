@@ -8,6 +8,8 @@ import java.io.PrintStream;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.StringContains.containsString;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 public class ButterflyTest {
 
@@ -26,16 +28,21 @@ public class ButterflyTest {
 
     @Test
     public void caterpillarShouldNotFly() {
-        new Butterfly().fly();
+        Butterfly butterfly = new Butterfly();
+        assertFalse(butterfly.canFly());
+
+        butterfly.fly();
         assertThat(outContent.toString(), containsString(""));
     }
 
     @Test
     public void onceCaterpillarBecomeButteryItCanFly() {
-        Butterfly caterpillar = new Butterfly();
-        caterpillar.transform();//become a butterfly
+        Butterfly butterfly = new Butterfly();
+        butterfly.transform();//become a butterfly
 
-        caterpillar.fly();
+        butterfly.fly();
         assertThat(outContent.toString(), containsString("Buttery flying"));
+        assertTrue(butterfly.canFly());
+
     }
 }

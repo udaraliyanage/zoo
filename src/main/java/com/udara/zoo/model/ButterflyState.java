@@ -15,4 +15,8 @@ public class ButterflyState implements Insect, Flyable, Walkable {
         System.out.println("Butterfly walking");
     }
 
+    @Override
+    public boolean canFly() {
+        return true;
+    }
 }
