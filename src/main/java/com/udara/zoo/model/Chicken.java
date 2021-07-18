@@ -4,15 +4,15 @@ import java.util.Locale;
 
 public class Chicken extends WalkingAnimal{
 
-    private final ChikenSpeakingBehavior speakingBehavior;
+    private final ChickenSpeakingBehavior speakingBehavior;
     private final Locale locale;
 
-    public Chicken(ChikenSpeakingBehavior speakingBehavior) {
+    public Chicken(ChickenSpeakingBehavior speakingBehavior) {
         this.speakingBehavior = speakingBehavior;
         this.locale = Locale.getDefault();
     }
 
-    public Chicken(ChikenSpeakingBehavior speakingBehavior, Locale locale) {
+    public Chicken(ChickenSpeakingBehavior speakingBehavior, Locale locale) {
         this.speakingBehavior = speakingBehavior;
         this.locale = locale;
     }

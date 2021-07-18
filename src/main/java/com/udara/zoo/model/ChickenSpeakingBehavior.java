@@ -3,11 +3,11 @@ package com.udara.zoo.model;
 import java.util.Locale;
 import java.util.Map;
 
-public  class ChikenSpeakingBehavior {
+public  class ChickenSpeakingBehavior {
 
     private Map<Locale, String> languageVoiceMap;
 
-    ChikenSpeakingBehavior(Map<Locale, String> languageVoiceMap) {
+    ChickenSpeakingBehavior(Map<Locale, String> languageVoiceMap) {
         this.languageVoiceMap = languageVoiceMap;
     }
 

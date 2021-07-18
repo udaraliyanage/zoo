@@ -5,7 +5,7 @@ import java.util.Map;
 
 import static java.util.Locale.*;
 
-public class RoosterSpeakingBehavior extends ChikenSpeakingBehavior {
+public class RoosterSpeakingBehavior extends ChickenSpeakingBehavior {
 
     private static Map<Locale, String> languageVoiceMap = Map.of(
                                                         getDefault(), "Cock-a-doodle-doo",
