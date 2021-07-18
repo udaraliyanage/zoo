@@ -1,9 +1,18 @@
 package com.udara.zoo.model;
 
+import java.util.Locale;
+import java.util.Map;
+
+import static java.util.Locale.*;
+
 public class HenSpeakingBehavior extends ChikenSpeakingBehavior {
 
-    @Override
-    public void speak() {
-        System.out.println("Cluck, cluck");
+    private static Map<Locale, String> languageVoiceMap = Map.of(
+            getDefault(), "Cluck, cluck",
+            FRENCH, "cicirico"
+    );
+
+    public HenSpeakingBehavior() {
+        super(languageVoiceMap);
     }
 }

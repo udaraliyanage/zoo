@@ -5,7 +5,9 @@ import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.util.Locale;
 
+import static java.util.Locale.FRENCH;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.StringContains.containsString;
 
@@ -35,4 +37,21 @@ public class ChickenTest {
         assertThat(outContent.toString(), containsString("Cock-a-doodle-doo"));
     }
 
+    @Test
+    public void frenchRoosterShouldSpeakInFrenchLanguage() {
+        new Chicken(new RoosterSpeakingBehavior(), FRENCH).shout();
+        assertThat(outContent.toString(), containsString("cocorico"));
+    }
+
+    @Test
+    public void frenchHenShouldSpeakInFrenchLanguage() {
+        new Chicken(new HenSpeakingBehavior(), FRENCH).shout();
+        assertThat(outContent.toString(), containsString("cicirico"));
+    }
+
+    @Test
+    public void sinhaleseRoosterShouldSpeakInSinhalaLanguage() {
+        new Chicken(new RoosterSpeakingBehavior(), new Locale("si", "LK")).shout();
+        assertThat(outContent.toString(), containsString("kokkukuuu"));
+    }
 }
