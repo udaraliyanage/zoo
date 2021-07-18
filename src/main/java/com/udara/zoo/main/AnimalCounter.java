@@ -1,6 +1,10 @@
 package com.udara.zoo.main;
 
 import com.udara.zoo.model.*;
+import com.udara.zoo.model.behavior.Flyable;
+import com.udara.zoo.model.behavior.Speakable;
+import com.udara.zoo.model.behavior.Swimable;
+import com.udara.zoo.model.behavior.Walkable;
 
 import java.util.Arrays;
 import java.util.List;

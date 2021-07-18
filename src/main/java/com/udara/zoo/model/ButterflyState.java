@@ -1,6 +1,9 @@
 package com.udara.zoo.model;
 
-public class ButterflyState implements Insect, Flyable, Walkable{
+import com.udara.zoo.model.behavior.Flyable;
+import com.udara.zoo.model.behavior.Walkable;
+
+public class ButterflyState implements Insect, Flyable, Walkable {
 
     @Override
     public void fly() {

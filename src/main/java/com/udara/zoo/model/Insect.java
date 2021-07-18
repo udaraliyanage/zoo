@@ -1,5 +1,8 @@
 package com.udara.zoo.model;
 
-public interface Insect extends Flyable, Walkable{
+import com.udara.zoo.model.behavior.Flyable;
+import com.udara.zoo.model.behavior.Walkable;
+
+public interface Insect extends Flyable, Walkable {
 
 }

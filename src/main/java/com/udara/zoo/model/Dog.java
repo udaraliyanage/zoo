@@ -1,5 +1,9 @@
 package com.udara.zoo.model;
 
+import com.udara.zoo.model.behavior.Speakable;
+import com.udara.zoo.model.behavior.Swimable;
+import com.udara.zoo.model.behavior.Walkable;
+
 public class Dog extends Animal implements Speakable, Walkable, Swimable {
 
     @Override

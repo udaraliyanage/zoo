@@ -1,5 +1,7 @@
 package com.udara.zoo.model;
 
+import com.udara.zoo.model.behavior.Swimable;
+
 public abstract class Fish extends Animal implements Swimable {
 
     private Size size;

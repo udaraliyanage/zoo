@@ -1,6 +1,8 @@
 package com.udara.zoo.model;
 
-public class Dolphin extends Animal implements Swimable{
+import com.udara.zoo.model.behavior.Swimable;
+
+public class Dolphin extends Animal implements Swimable {
 
     @Override
     public void swim() {
