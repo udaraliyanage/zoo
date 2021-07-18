@@ -5,9 +5,12 @@ import com.udara.zoo.model.Animal;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api")
@@ -17,27 +20,16 @@ public class ZooController {
     private AnimalService animalService;
 
     @GetMapping(value = "/animal")
-    public List<Animal> getAllAnimals(){
-        return animalService.getAllAnimals();
-    }
+    public List<Animal> getAllAnimals(@RequestParam Optional<String> type){
 
-    @GetMapping("/animal/walking")
-    public List<Animal> getWalkingAnimals(){
-        return animalService.getWalkingAnimals();
-    }
-
-    @GetMapping("/animal/flying")
-    public List<Animal> getFlyingAnimals(){
-        return animalService.getFlyingAnimals();
-    }
-
-    @GetMapping("/animal/swimming")
-    public List<Animal> getSwimingAnimals(){
-        return animalService.getSwimmingAnimal();
-    }
-
-    @GetMapping("/animal/jumping")
-    public List<Animal> getJumpingAnimals(){
-        return animalService.getJumpingAnimals();
+        String typeText = type.orElse("ALL").toUpperCase();
+        return switch (typeText) {
+            case "ALL" -> animalService.getAllAnimals();
+            case "WALKING" -> animalService.getWalkingAnimals();
+            case "SWIMMING" -> animalService.getSwimmingAnimal();
+            case "FLYING" -> animalService.getFlyingAnimals();
+            case "JUMPING" -> animalService.getJumpingAnimals();
+            default -> Collections.emptyList();
+        };
     }
 }
