@@ -54,4 +54,10 @@ public class ChickenTest {
         new Chicken(new RoosterSpeakingBehavior(), new Locale("si", "LK")).shout();
         assertThat(outContent.toString(), containsString("kokkukuuu"));
     }
+
+    @Test
+    public void ifLocaleIsNotMentionedRoosterShouldSpeckInDefaultWay() {
+        new Chicken(new RoosterSpeakingBehavior(), null).shout();
+        assertThat(outContent.toString(), containsString("Cock-a-doodle-do"));
+    }
 }

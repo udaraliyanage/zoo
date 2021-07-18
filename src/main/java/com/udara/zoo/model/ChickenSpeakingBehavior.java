@@ -16,6 +16,7 @@ public  class ChickenSpeakingBehavior {
     }
 
     public  void speak(Locale locale){
-        System.out.println(languageVoiceMap.get(locale));
+        String speech = locale == null ? languageVoiceMap.get(Locale.getDefault()) : languageVoiceMap.get(locale);
+        System.out.println(speech);
     }
 }
