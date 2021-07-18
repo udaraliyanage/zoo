@@ -1,4 +1,4 @@
 package com.udara.zoo.model;
 
-abstract class Animal {
+public abstract class Animal {
 }
