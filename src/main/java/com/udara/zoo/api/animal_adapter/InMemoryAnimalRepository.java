@@ -1,32 +1,25 @@
-package com.udara.zoo.api;
+package com.udara.zoo.api.animal_adapter;
 
+import com.udara.zoo.api.animal.AnimalRepository;
 import com.udara.zoo.model.*;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-@RestController
-@RequestMapping("/api")
-public class ZooController {
+@Component
+public class InMemoryAnimalRepository implements AnimalRepository {
 
-    private List<Animal> animals;
-
-    public ZooController() {
-        this.animals = createAnimal();
+    @Override
+    public List<Animal> fetchAll() {
+        return getAnimals();
     }
 
-    @GetMapping(value = "/animal")
-    public List<Animal> getAllAnimals(){
-        return animals;
-    }
-
-    private List<Animal> createAnimal() {
+    private List<Animal> getAnimals() {
         Chicken chicken = new Chicken(new HenSpeakingBehavior());
-        chicken.setName("Hen Solo");
+        chicken.setName("Hercules");
+
         Parrot parrot = new Parrot(new ParrotLivingWithCatSpeakingBehavior());
         parrot.setName("Lago");
         Chicken rooster = new Chicken(new RoosterSpeakingBehavior());
