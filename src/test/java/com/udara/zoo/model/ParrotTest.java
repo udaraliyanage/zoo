@@ -8,7 +8,6 @@ import java.io.PrintStream;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.StringContains.containsString;
-import static org.junit.Assert.*;
 
 public class ParrotTest {
 
@@ -33,7 +32,7 @@ public class ParrotTest {
 
     @Test
     public void parrotLivingWithDogShouldSpeackAsWoofwoof() {
-        new Parrot(new ParrotLivingWithDodSpeakingBehavior()).shout();
+        new Parrot(new ParrotLivingWithDogSpeakingBehavior()).shout();
         assertThat(outContent.toString(), containsString("Woof, woof"));
     }
 
