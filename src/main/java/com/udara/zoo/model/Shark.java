@@ -5,6 +5,10 @@ import static com.udara.zoo.model.Size.LARGE;
 
 public class Shark extends Fish {
 
+    public Shark(String name) {
+        super(LARGE, GREY, name);
+    }
+
     public Shark() {
         super(LARGE, GREY);
     }
