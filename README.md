@@ -2,7 +2,7 @@
 
 Zoo application that model several types of animals and expose REST apis to query them.
 
-You can refer to class diagram to [contract tests](src/main/resources/docs/class_diagram.png) visually see class modeling.
+You can refer to [class diagram](src/main/resources/docs/class_diagram.png) to visually see class modeling.
 
 ## Installation
 
